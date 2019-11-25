@@ -3,13 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01C68D5D7A2469709A16F3D7 /* Pods_SwiftyArtNet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D5A4AFB081895089F81BC79 /* Pods_SwiftyArtNet.framework */; };
+		6F50F9EA2388359B00778995 /* Data+Bytes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F50F9E92388359B00778995 /* Data+Bytes.swift */; };
+		6F50F9EE2388360300778995 /* ArtNetPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F50F9ED2388360300778995 /* ArtNetPacket.swift */; };
+		6F50F9F02388364500778995 /* ArtPollReply.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F50F9EF2388364500778995 /* ArtPollReply.swift */; };
 		6FDA65C62385ACE100A1E192 /* SwiftyArtNet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FDA65BC2385ACE100A1E192 /* SwiftyArtNet.framework */; };
 		6FDA65CB2385ACE100A1E192 /* SwiftyArtNetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDA65CA2385ACE100A1E192 /* SwiftyArtNetTests.swift */; };
 		6FDA65CD2385ACE100A1E192 /* SwiftyArtNet.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FDA65BF2385ACE100A1E192 /* SwiftyArtNet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6FDA65D72388343B00A1E192 /* SwiftyArtNet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDA65D62388343B00A1E192 /* SwiftyArtNet.swift */; };
+		A285B04B9C5FA30733231337 /* Pods_SwiftyArtNet_SwiftyArtNetTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 274C2A3C00A39EB6F450F74C /* Pods_SwiftyArtNet_SwiftyArtNetTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,12 +29,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		274C2A3C00A39EB6F450F74C /* Pods_SwiftyArtNet_SwiftyArtNetTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftyArtNet_SwiftyArtNetTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C2DF8D44AB3174B8152F648 /* Pods-SwiftyArtNet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyArtNet.debug.xcconfig"; path = "Target Support Files/Pods-SwiftyArtNet/Pods-SwiftyArtNet.debug.xcconfig"; sourceTree = "<group>"; };
+		4EDC77C9EE1FCAD94959ED60 /* Pods-SwiftyArtNet-SwiftyArtNetTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyArtNet-SwiftyArtNetTests.debug.xcconfig"; path = "Target Support Files/Pods-SwiftyArtNet-SwiftyArtNetTests/Pods-SwiftyArtNet-SwiftyArtNetTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6F50F9E92388359B00778995 /* Data+Bytes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Bytes.swift"; sourceTree = "<group>"; };
+		6F50F9ED2388360300778995 /* ArtNetPacket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtNetPacket.swift; sourceTree = "<group>"; };
+		6F50F9EF2388364500778995 /* ArtPollReply.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtPollReply.swift; sourceTree = "<group>"; };
 		6FDA65BC2385ACE100A1E192 /* SwiftyArtNet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyArtNet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FDA65BF2385ACE100A1E192 /* SwiftyArtNet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftyArtNet.h; sourceTree = "<group>"; };
 		6FDA65C02385ACE100A1E192 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6FDA65C52385ACE100A1E192 /* SwiftyArtNetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftyArtNetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FDA65CA2385ACE100A1E192 /* SwiftyArtNetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyArtNetTests.swift; sourceTree = "<group>"; };
 		6FDA65CC2385ACE100A1E192 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6FDA65D62388343B00A1E192 /* SwiftyArtNet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyArtNet.swift; sourceTree = "<group>"; };
+		727DAEEE83AB5E2C98E02F26 /* Pods-SwiftyArtNet-SwiftyArtNetTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyArtNet-SwiftyArtNetTests.release.xcconfig"; path = "Target Support Files/Pods-SwiftyArtNet-SwiftyArtNetTests/Pods-SwiftyArtNet-SwiftyArtNetTests.release.xcconfig"; sourceTree = "<group>"; };
+		7D5A4AFB081895089F81BC79 /* Pods_SwiftyArtNet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftyArtNet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB32E4F26A3444F8B5A6510D /* Pods-SwiftyArtNet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyArtNet.release.xcconfig"; path = "Target Support Files/Pods-SwiftyArtNet/Pods-SwiftyArtNet.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01C68D5D7A2469709A16F3D7 /* Pods_SwiftyArtNet.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,18 +61,58 @@
 			buildActionMask = 2147483647;
 			files = (
 				6FDA65C62385ACE100A1E192 /* SwiftyArtNet.framework in Frameworks */,
+				A285B04B9C5FA30733231337 /* Pods_SwiftyArtNet_SwiftyArtNetTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		39CAA44CC0AC00F7AC7EE794 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3C2DF8D44AB3174B8152F648 /* Pods-SwiftyArtNet.debug.xcconfig */,
+				AB32E4F26A3444F8B5A6510D /* Pods-SwiftyArtNet.release.xcconfig */,
+				4EDC77C9EE1FCAD94959ED60 /* Pods-SwiftyArtNet-SwiftyArtNetTests.debug.xcconfig */,
+				727DAEEE83AB5E2C98E02F26 /* Pods-SwiftyArtNet-SwiftyArtNetTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		585A189C476AD319C99948EA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7D5A4AFB081895089F81BC79 /* Pods_SwiftyArtNet.framework */,
+				274C2A3C00A39EB6F450F74C /* Pods_SwiftyArtNet_SwiftyArtNetTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6F50F9EB238835B600778995 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6F50F9E92388359B00778995 /* Data+Bytes.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6F50F9EC238835CB00778995 /* ArtNet */ = {
+			isa = PBXGroup;
+			children = (
+				6F50F9ED2388360300778995 /* ArtNetPacket.swift */,
+				6F50F9EF2388364500778995 /* ArtPollReply.swift */,
+			);
+			path = ArtNet;
+			sourceTree = "<group>";
+		};
 		6FDA65B22385ACE100A1E192 = {
 			isa = PBXGroup;
 			children = (
 				6FDA65BE2385ACE100A1E192 /* SwiftyArtNet */,
 				6FDA65C92385ACE100A1E192 /* SwiftyArtNetTests */,
 				6FDA65BD2385ACE100A1E192 /* Products */,
+				39CAA44CC0AC00F7AC7EE794 /* Pods */,
+				585A189C476AD319C99948EA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +130,9 @@
 			children = (
 				6FDA65BF2385ACE100A1E192 /* SwiftyArtNet.h */,
 				6FDA65C02385ACE100A1E192 /* Info.plist */,
+				6FDA65D62388343B00A1E192 /* SwiftyArtNet.swift */,
+				6F50F9EC238835CB00778995 /* ArtNet */,
+				6F50F9EB238835B600778995 /* Extensions */,
 			);
 			path = SwiftyArtNet;
 			sourceTree = "<group>";
@@ -104,6 +164,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6FDA65D02385ACE100A1E192 /* Build configuration list for PBXNativeTarget "SwiftyArtNet" */;
 			buildPhases = (
+				20882967D0AA99D7AD88C6BD /* [CP] Check Pods Manifest.lock */,
 				6FDA65B72385ACE100A1E192 /* Headers */,
 				6FDA65B82385ACE100A1E192 /* Sources */,
 				6FDA65B92385ACE100A1E192 /* Frameworks */,
@@ -122,9 +183,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6FDA65D32385ACE100A1E192 /* Build configuration list for PBXNativeTarget "SwiftyArtNetTests" */;
 			buildPhases = (
+				2D0B2C1407B8883AEFEC7175 /* [CP] Check Pods Manifest.lock */,
 				6FDA65C12385ACE100A1E192 /* Sources */,
 				6FDA65C22385ACE100A1E192 /* Frameworks */,
 				6FDA65C32385ACE100A1E192 /* Resources */,
+				53BD33D69628E1E3CF3B7529 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -148,6 +211,7 @@
 				TargetAttributes = {
 					6FDA65BB2385ACE100A1E192 = {
 						CreatedOnToolsVersion = 11.2.1;
+						LastSwiftMigration = 1120;
 					};
 					6FDA65C42385ACE100A1E192 = {
 						CreatedOnToolsVersion = 11.2.1;
@@ -190,11 +254,79 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		20882967D0AA99D7AD88C6BD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwiftyArtNet-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2D0B2C1407B8883AEFEC7175 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwiftyArtNet-SwiftyArtNetTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		53BD33D69628E1E3CF3B7529 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftyArtNet-SwiftyArtNetTests/Pods-SwiftyArtNet-SwiftyArtNetTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftyArtNet-SwiftyArtNetTests/Pods-SwiftyArtNet-SwiftyArtNetTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftyArtNet-SwiftyArtNetTests/Pods-SwiftyArtNet-SwiftyArtNetTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6FDA65B82385ACE100A1E192 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F50F9EE2388360300778995 /* ArtNetPacket.swift in Sources */,
+				6F50F9F02388364500778995 /* ArtPollReply.swift in Sources */,
+				6FDA65D72388343B00A1E192 /* SwiftyArtNet.swift in Sources */,
+				6F50F9EA2388359B00778995 /* Data+Bytes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,7 +471,9 @@
 		};
 		6FDA65D12385ACE100A1E192 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C2DF8D44AB3174B8152F648 /* Pods-SwiftyArtNet.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 5LS72D7KS3;
@@ -356,6 +490,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jaimeeee.SwiftyArtNet;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -363,7 +498,9 @@
 		};
 		6FDA65D22385ACE100A1E192 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB32E4F26A3444F8B5A6510D /* Pods-SwiftyArtNet.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 5LS72D7KS3;
@@ -387,7 +524,9 @@
 		};
 		6FDA65D42385ACE100A1E192 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4EDC77C9EE1FCAD94959ED60 /* Pods-SwiftyArtNet-SwiftyArtNetTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5LS72D7KS3;
 				INFOPLIST_FILE = SwiftyArtNetTests/Info.plist;
@@ -405,7 +544,9 @@
 		};
 		6FDA65D52385ACE100A1E192 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 727DAEEE83AB5E2C98E02F26 /* Pods-SwiftyArtNet-SwiftyArtNetTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5LS72D7KS3;
 				INFOPLIST_FILE = SwiftyArtNetTests/Info.plist;
