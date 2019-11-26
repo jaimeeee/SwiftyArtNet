@@ -9,17 +9,15 @@
 import Foundation
 import CocoaAsyncSocket
 
-protocol SwiftyArtNetDMXDelegate {
+protocol SwiftyArtNetDMXDelegate: class {
     func dmxFrame(sequence: UInt8, physical: UInt8, universe: UInt16, length: UInt16, dmx: [UInt8])
 }
 
-
-
 class SwiftyArtNet: NSObject {
     
-    var delegate: SwiftyArtNetDMXDelegate?
-    
-    static func == (lhs: SwiftyArtNet, rhs: SwiftyArtNet) -> Bool {
+    weak var delegate: SwiftyArtNetDMXDelegate?
+
+    override class func isEqual(_ object: Any?) -> Bool {
         return false
     }
     
@@ -73,7 +71,8 @@ class SwiftyArtNet: NSObject {
 
 extension SwiftyArtNet: GCDAsyncUdpSocketDelegate {
     
-    func udpSocket(_ sock: GCDAsyncUdpSocket, didReceive data: Data, fromAddress address: Data, withFilterContext filterContext: Any?) {
+    func udpSocket(_ sock: GCDAsyncUdpSocket, didReceive data: Data,
+                   fromAddress address: Data, withFilterContext filterContext: Any?) {
         guard isArtNetMessage(data: data) else { return }
         guard isArtNetMinimumProtocolVersion(data: data) else {
             print("lower than minimum, ignore")

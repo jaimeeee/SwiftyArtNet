@@ -169,6 +169,7 @@
 				6FDA65B82385ACE100A1E192 /* Sources */,
 				6FDA65B92385ACE100A1E192 /* Frameworks */,
 				6FDA65BA2385ACE100A1E192 /* Resources */,
+				632C0005238D63170062B3CA /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -315,6 +316,23 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftyArtNet-SwiftyArtNetTests/Pods-SwiftyArtNet-SwiftyArtNetTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		632C0005238D63170062B3CA /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

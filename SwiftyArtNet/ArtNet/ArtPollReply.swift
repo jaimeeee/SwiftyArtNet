@@ -16,10 +16,10 @@ struct ArtPollReply: ArtNetPacket {
     private let macBlocks: [UInt8] = [0x00, 0x00, 0x00, 0x00, 0x00, 0x00]
     
     private var IPv4Address: String? {
-        var address : String?
+        var address: String?
 
         // Get list of all interfaces on the local machine:
-        var ifaddr : UnsafeMutablePointer<ifaddrs>?
+        var ifaddr: UnsafeMutablePointer<ifaddrs>?
         guard getifaddrs(&ifaddr) == 0 else { return nil }
         guard let firstAddr = ifaddr else { return nil }
 
@@ -61,11 +61,14 @@ struct ArtPollReply: ArtNetPacket {
         data.replaceSubrange(0..<8, with: header.data(using: .utf8)!)
 
         // OpCode [8 - 10]
-        data.replaceSubrange(8..<10, with: withUnsafeBytes(of: ArtNetOpCode.pollReply.rawValue.littleEndian) { Data($0) })
+        data.replaceSubrange(8..<10, with: withUnsafeBytes(of: ArtNetOpCode.pollReply.rawValue.littleEndian) {
+            Data($0)
+        })
         
         // IP Address [10 - 14]
-        for i in 0..<4 {
-            data.replaceSubrange((10 + i)..<(11 + i), with: withUnsafeBytes(of: ipBlocks[i]) { Data($0) })
+        for block in 0..<4 {
+            let range = (10 + block)..<(11 + block)
+            data.replaceSubrange(range, with: withUnsafeBytes(of: ipBlocks[block]) { Data($0) })
         }
         
         // Port Number [14 - 16]
@@ -115,8 +118,9 @@ struct ArtPollReply: ArtNetPacket {
         data.replaceSubrange(190..<191, with: withUnsafeBytes(of: UInt8(1)) { Data($0) })
         
         // MAC Address [201 - 207]
-        for i in 0..<6 {
-            data.replaceSubrange((201 + i)..<(202 + i), with: withUnsafeBytes(of: macBlocks[i]) { Data($0) })
+        for block in 0..<6 {
+            let range = (201 + block)..<(202 + block)
+            data.replaceSubrange(range, with: withUnsafeBytes(of: macBlocks[block]) { Data($0) })
         }
         
         // Status2 [212]
