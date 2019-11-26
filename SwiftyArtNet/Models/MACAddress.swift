@@ -13,13 +13,16 @@ struct MACAddress {
     let blocks: [UInt8]
     
     var stringValue: String {
-        return blocks.map { String($0) }.joined(separator: ":")
+        return blocks.map { String(format: "%02X", $0) }.joined(separator: ":")
     }
     
     init?(string: String) {
         let macBlocks = string.split(separator: ":", maxSplits: 5)
-        blocks = macBlocks.compactMap { UInt8($0) }
-        guard blocks.count == 6 else { return nil }
+        let blocks = macBlocks.compactMap { UInt8($0, radix: 16) }
+        guard blocks.count == 6 else {
+            return nil
+        }
+        self.blocks = blocks
     }
     
 }

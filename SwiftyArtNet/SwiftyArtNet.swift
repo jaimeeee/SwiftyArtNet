@@ -51,14 +51,9 @@ class SwiftyArtNet: NSObject {
     }
     
     func isArtNetMessage(data: Data) -> Bool {
-        guard let header = String(data: data.subdata(in: 0..<8), encoding: .utf8) else {
-            return false
-        }
-        guard header == Configuration.header else {
-            print("not Art-Net")
-            return false
-        }
-        return true
+        guard data.count > 7 else { return false }
+        guard let header = String(data: data.subdata(in: 0..<8), encoding: .ascii) else { return false }
+        return header == Configuration.header
     }
     
     func isArtNetMinimumProtocolVersion(data: Data) -> Bool {
@@ -69,6 +64,7 @@ class SwiftyArtNet: NSObject {
     
 }
 
+// MARK: - GCDAsyncUdpSocketDelegate
 extension SwiftyArtNet: GCDAsyncUdpSocketDelegate {
     
     func udpSocket(_ sock: GCDAsyncUdpSocket, didReceive data: Data,
