@@ -11,6 +11,8 @@
 		6F50F9EA2388359B00778995 /* Data+Bytes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F50F9E92388359B00778995 /* Data+Bytes.swift */; };
 		6F50F9EE2388360300778995 /* ArtNetPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F50F9ED2388360300778995 /* ArtNetPacket.swift */; };
 		6F50F9F02388364500778995 /* ArtPollReply.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F50F9EF2388364500778995 /* ArtPollReply.swift */; };
+		6F6DB1A6238C581200C23B88 /* MACAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6DB1A5238C581200C23B88 /* MACAddress.swift */; };
+		6F6DB1A8238C59BD00C23B88 /* MACAddressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6DB1A7238C59BD00C23B88 /* MACAddressTests.swift */; };
 		6FDA65C62385ACE100A1E192 /* SwiftyArtNet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FDA65BC2385ACE100A1E192 /* SwiftyArtNet.framework */; };
 		6FDA65CB2385ACE100A1E192 /* SwiftyArtNetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDA65CA2385ACE100A1E192 /* SwiftyArtNetTests.swift */; };
 		6FDA65CD2385ACE100A1E192 /* SwiftyArtNet.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FDA65BF2385ACE100A1E192 /* SwiftyArtNet.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -35,6 +37,8 @@
 		6F50F9E92388359B00778995 /* Data+Bytes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Bytes.swift"; sourceTree = "<group>"; };
 		6F50F9ED2388360300778995 /* ArtNetPacket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtNetPacket.swift; sourceTree = "<group>"; };
 		6F50F9EF2388364500778995 /* ArtPollReply.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtPollReply.swift; sourceTree = "<group>"; };
+		6F6DB1A5238C581200C23B88 /* MACAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MACAddress.swift; sourceTree = "<group>"; };
+		6F6DB1A7238C59BD00C23B88 /* MACAddressTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MACAddressTests.swift; sourceTree = "<group>"; };
 		6FDA65BC2385ACE100A1E192 /* SwiftyArtNet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyArtNet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FDA65BF2385ACE100A1E192 /* SwiftyArtNet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftyArtNet.h; sourceTree = "<group>"; };
 		6FDA65C02385ACE100A1E192 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -105,6 +109,23 @@
 			path = ArtNet;
 			sourceTree = "<group>";
 		};
+		6F6DB1A3238C4DBB00C23B88 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				6FDA65C02385ACE100A1E192 /* Info.plist */,
+				6FDA65BF2385ACE100A1E192 /* SwiftyArtNet.h */,
+			);
+			name = Configuration;
+			sourceTree = "<group>";
+		};
+		6F6DB1A4238C580300C23B88 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6F6DB1A5238C581200C23B88 /* MACAddress.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		6FDA65B22385ACE100A1E192 = {
 			isa = PBXGroup;
 			children = (
@@ -128,11 +149,11 @@
 		6FDA65BE2385ACE100A1E192 /* SwiftyArtNet */ = {
 			isa = PBXGroup;
 			children = (
-				6FDA65BF2385ACE100A1E192 /* SwiftyArtNet.h */,
-				6FDA65C02385ACE100A1E192 /* Info.plist */,
 				6FDA65D62388343B00A1E192 /* SwiftyArtNet.swift */,
 				6F50F9EC238835CB00778995 /* ArtNet */,
 				6F50F9EB238835B600778995 /* Extensions */,
+				6F6DB1A4238C580300C23B88 /* Models */,
+				6F6DB1A3238C4DBB00C23B88 /* Configuration */,
 			);
 			path = SwiftyArtNet;
 			sourceTree = "<group>";
@@ -140,8 +161,9 @@
 		6FDA65C92385ACE100A1E192 /* SwiftyArtNetTests */ = {
 			isa = PBXGroup;
 			children = (
-				6FDA65CA2385ACE100A1E192 /* SwiftyArtNetTests.swift */,
 				6FDA65CC2385ACE100A1E192 /* Info.plist */,
+				6F6DB1A7238C59BD00C23B88 /* MACAddressTests.swift */,
+				6FDA65CA2385ACE100A1E192 /* SwiftyArtNetTests.swift */,
 			);
 			path = SwiftyArtNetTests;
 			sourceTree = "<group>";
@@ -345,6 +367,7 @@
 				6F50F9F02388364500778995 /* ArtPollReply.swift in Sources */,
 				6FDA65D72388343B00A1E192 /* SwiftyArtNet.swift in Sources */,
 				6F50F9EA2388359B00778995 /* Data+Bytes.swift in Sources */,
+				6F6DB1A6238C581200C23B88 /* MACAddress.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,6 +375,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F6DB1A8238C59BD00C23B88 /* MACAddressTests.swift in Sources */,
 				6FDA65CB2385ACE100A1E192 /* SwiftyArtNetTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
