@@ -2,7 +2,7 @@
 
 # SwiftyArtNet
 
-Simple library to create an Art-Net node and receive DMX messages throught WiFi.
+Simple framework to create an Art-Net node and receive DMX messages throught WiFi.
 
 ## How To Use
 
