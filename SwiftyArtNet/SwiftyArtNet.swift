@@ -31,6 +31,12 @@ class SwiftyArtNet: NSObject {
         let socket = GCDAsyncUdpSocket(delegate: self, delegateQueue: .main)
         socket.isIPv4()
         do {
+            try socket.enableReusePort(true)
+        } catch {
+            print("Error enabling reuse port")
+            throw error
+        }
+        do {
             try socket.bind(toPort: Configuration.portNumber)
         } catch {
             print("Error binding to port")
